@@ -11,8 +11,9 @@ export default defineConfig({
         tailwindcss(),
     ],
     server: {
-        watch: {
-            ignored: ['**/storage/framework/views/**'],
+        host: '0.0.0.0', // Allow network access
+        hmr: {
+            host: '192.168.0.100', // Use your actual IP here
         },
     },
 });
